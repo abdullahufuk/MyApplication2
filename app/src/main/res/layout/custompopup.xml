@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="450dp"
+    android:background="@color/colorPrimaryDark"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+
+    >
+    
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+        <ImageButton
+            android:id="@+id/left_nav"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center_vertical|left"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:background="@android:color/transparent"
+
+            />
+
+        <ImageButton
+            android:id="@+id/right_nav"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:background="@android:color/transparent"
+              />
+
+
+
+    </FrameLayout>
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white">
+    <TextSwitcher
+        android:id="@+id/textSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        />
+
+</FrameLayout>
+
+
+
+
+</LinearLayout>
