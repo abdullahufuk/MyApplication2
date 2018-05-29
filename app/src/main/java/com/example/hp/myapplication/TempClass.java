@@ -2,7 +2,7 @@ package com.example.hp.myapplication;
 
 public class TempClass {
 
-    //Hoşgeldin aufukgarip
+    //Hoşgeldin aufukgarip dsfsd
     String name;
     public int max(int max){
         return max;
