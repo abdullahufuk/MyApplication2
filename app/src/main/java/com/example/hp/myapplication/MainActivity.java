@@ -21,6 +21,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -59,6 +62,11 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right);
         fragmentTransaction.add(R.id.fragment, homeFragment).commit();
 
+        try {
+            new WebApiTest().execute(new URL("http://192.168.1.4:53186/api/Employee"));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
 
     }
 
