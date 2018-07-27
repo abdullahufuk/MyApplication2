@@ -62,9 +62,10 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right);
         fragmentTransaction.add(R.id.fragment, homeFragment).commit();
 
+        String webApiURL= "http://ufukwenapioncloud.cloudapp.net/api/Values";//"http://192.168.1.3:63351/api/Students";
         try {
-            new WebApiTest().execute(new URL("http://192.168.1.4:53186/api/Employee"));
-        } catch (MalformedURLException e) {
+            new WebApiTest().execute(webApiURL);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

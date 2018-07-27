@@ -7,14 +7,14 @@ import org.json.JSONObject;
 
 import java.net.URL;
 
-public class WebApiTest extends AsyncTask<URL,Void,String> {
-
+public class WebApiTest extends AsyncTask<String,Void,String> {
 
 
     @Override
-    protected String doInBackground(URL... urls) {
+    protected String doInBackground(String... strings) {
+
         JsonParser jParser=new JsonParser();
-         JSONArray jsonArray= jParser.getJSONObjectFromUrl(urls[0].toString());
+        JSONArray jsonArray= jParser.getJSONObjectFromUrl(strings[0]);
 
         return null;
     }

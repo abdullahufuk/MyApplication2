@@ -8,10 +8,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.Charset;
 
 public class JsonParser {
+
 
 
 
@@ -33,8 +36,11 @@ public class JsonParser {
     public JSONArray getJSONObjectFromUrl(String url){
         JSONArray jsonArray=null;
         try {
-            InputStream inputStream=new URL(url).openStream();
-            BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
+            URL u= new URL(url);
+            HttpURLConnection uc= (HttpURLConnection) u.openConnection();
+
+
+            BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(uc.getInputStream(), Charset.forName("UTF-8")));
             String jsonText=readAll(bufferedReader);
             jsonArray=new JSONArray(jsonText);
 
