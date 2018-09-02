@@ -25,6 +25,7 @@ public class Sual_Cevap_Frg extends Fragment {
     private ProgressBar progressBarCircle;
     private TextView textViewTime;
     private Button btnStart;
+    private TextView textViewQuestion;
     public Sual_Cevap_Frg() {
         // Required empty public constructor
     }
@@ -39,6 +40,7 @@ public class Sual_Cevap_Frg extends Fragment {
         View view=inflater.inflate(R.layout.fragment_sual__cevap__frg, container, false);
         progressBarCircle=view.findViewById(R.id.progressBarCircle);
         textViewTime=view.findViewById(R.id.textViewTime);
+        textViewQuestion=view.findViewById(R.id.textViewQuestion);
         btnStart=view.findViewById(R.id.btnStart);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +51,7 @@ public class Sual_Cevap_Frg extends Fragment {
         progressBarCircle.setMax((int) 60000 / 1000);
         progressBarCircle.setProgress((int) 60000 / 1000);
 
-        view.setBackgroundResource(R.drawable.hexagon_drawable);
+
 
 
         return view;
