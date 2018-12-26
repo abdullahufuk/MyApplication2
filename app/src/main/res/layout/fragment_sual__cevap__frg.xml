@@ -3,7 +3,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/white">
 
     <ProgressBar
         android:id="@+id/progressBarCircle"
@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         android:indeterminate="false"
         android:max="100"
         android:progress="100"
@@ -35,15 +35,7 @@
         android:textColor="@color/colorYellow"
         android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/tvSual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="48dp"
-        android:text="abdullahufukgarip"
-        android:textColor="@color/white" />
+
 
 
     <Button
@@ -52,10 +44,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="36dp"
-        android:layout_toEndOf="@+id/tvSual"
+        android:layout_centerHorizontal="true"
         android:text="BAŞLA"
         />
 
 
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="211dp"
+        android:layout_height="133dp"
+        android:layout_alignLeft="@id/progressBarCircle"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/progressBarCircle"
+        android:layout_marginStart="36dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/hexagon_drawable"
+        android:text="TextViewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+        android:textAlignment="center" />
 
 </RelativeLayout>
