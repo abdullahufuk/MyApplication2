@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment, sualCvpFragment).commit();
 
         } else if (id == R.id.nav_manage) {
+            setTitle("LA ĞALİBE İLLALLAH");
 
         } else if (id == R.id.nav_share) {
 
