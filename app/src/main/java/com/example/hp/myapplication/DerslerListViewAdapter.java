@@ -1,6 +1,7 @@
 package com.example.hp.myapplication;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,9 @@ public class DerslerListViewAdapter extends BaseAdapter {
             viewHolder.textViewDescription = (TextView) convertView.findViewById(R.id.textViewDescription);
             viewHolder.textViewDescription.setText(derslerArrayList.get(position).getDescription());
             convertView.setTag(viewHolder);
-
+            if (position % 2 == 1) {
+                convertView.setBackgroundColor(Color.LTGRAY);
+            }
 
         } else
             viewHolder = (ViewHolder) convertView.getTag();
